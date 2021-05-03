@@ -1,26 +1,26 @@
-// const gulp = require("gulp");
-// const gap = require("gulp-append-prepend");
+const gulp = require("gulp");
+const gap = require("gulp-append-prepend");
 
-// gulp.task("default", async function () {
-//   gulp
-//     .src("build/static/js/*chunk.js", { base: "./" })
-//     .pipe(
-//       gap.prependText()
-//     )
-//     .pipe(gulp.dest("./", { overwrite: true }));
+gulp.task("default", async function () {
+  gulp
+    .src("build/static/js/*chunk.js", { base: "./" })
+    .pipe(
+      gap.prependText()
+    )
+    .pipe(gulp.dest("./", { overwrite: true }));
 
-//   gulp
-//     .src("build/index.html", { base: "./" })
-//     .pipe(
-//       gap.prependText()
-//     )
-//     .pipe(gulp.dest("./", { overwrite: true }));
+  gulp
+    .src("build/index.html", { base: "./" })
+    .pipe(
+      gap.prependText()
+    )
+    .pipe(gulp.dest("./", { overwrite: true }));
 
-//   gulp
-//     .src("build/static/css/*chunk.css", { base: "./" })
-//     .pipe(
-//       gap.prependText()
-//     )
-//     .pipe(gulp.dest("./", { overwrite: true }));
-//   return;
-// });
+  gulp
+    .src("build/static/css/*chunk.css", { base: "./" })
+    .pipe(
+      gap.prependText()
+    )
+    .pipe(gulp.dest("./", { overwrite: true }));
+  return;
+});
