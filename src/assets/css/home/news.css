@@ -1,0 +1,108 @@
+.news_link {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.news_link:hover {
+    color: grey;
+}
+
+.news_link_top {
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: serif;
+  font-style: inherit;
+}
+
+.news_link_top:hover {
+  color: cornflowerblue;
+}
+
+.content {
+    margin-top: 10px;
+    -webkit-margin-top: 10px;
+    font-family: serif;
+}
+
+.row-row {
+    padding-top: 15px;
+    -webkit-padding-top: 15px;
+}
+
+/* .border-left {
+    border-left: 1px groove;
+}
+
+.border-top {
+    border-top: 1px groove;
+} */
+
+.genre { 
+    font-size: 16px;
+    font-family: serif;
+    font-weight: bold;
+}
+
+.react-tabs {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  .react-tabs__tab-list {
+    border-bottom: 1px solid #aaa;
+    margin: 0 0 10px;
+    padding: 0;
+  }
+  
+  .react-tabs__tab {
+    display: inline-block;
+    border: 1px solid transparent;
+    border-bottom: none;
+    bottom: -1px;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    cursor: pointer;
+  }
+  
+  .react-tabs__tab:hover {
+      color: grey;
+  }
+
+  .react-tabs__tab--selected {
+    background: #fff;
+    border-color: #aaa;
+    color: black;
+    border-radius: 5px 5px 0 0;
+  }
+  
+  .react-tabs__tab--disabled {
+    color: GrayText;
+    cursor: default;
+  }
+  
+  .react-tabs__tab:focus {
+    box-shadow: 0 0 5px hsl(208, 99%, 50%);
+    border-color: hsl(208, 99%, 50%);
+    outline: none;
+  }
+  
+  .react-tabs__tab:focus:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    left: -4px;
+    right: -4px;
+    bottom: -5px;
+    background: #fff;
+  }
+  
+  .react-tabs__tab-panel {
+    display: none;
+  }
+  
+  .react-tabs__tab-panel--selected {
+    display: block;
+  }

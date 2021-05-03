@@ -1,0 +1,37 @@
+.map-container {
+  position: 'absolute';
+  top: 0;
+  right: 0;
+  margin-top: 20;
+  left: 0;
+  bottom: 0;
+  border: 1px solid;
+}
+
+.marker-not-book {
+  background-image: url('https://cdn4.iconfinder.com/data/icons/small-n-flat/24/map-marker-512.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.marker-book {
+  background-image: url('https://cdn2.iconfinder.com/data/icons/font-awesome/1792/map-marker-512.png');
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 240px;
+  max-height: 240;
+}
+
+.mapboxgl-popup-content {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
