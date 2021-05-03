@@ -41,7 +41,7 @@ class Dashboard extends React.Component {
   async componentDidMount() {
     const currentUser = authenticationService.currentUserValue;
     this.setState({ isLoading: true });
-    const response = await fetch('http://localhost:8080/admin/account/dashboard', {
+    const response = await fetch('http://13.212.33.166/admin/account/dashboard', {
       method: "get",
       mode: 'cors',
       headers: {

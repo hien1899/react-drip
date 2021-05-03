@@ -41,7 +41,7 @@ class newsDetail extends React.Component {
         const id = window.location.pathname.split('/')[(window.location.pathname.split('/').length - 1)];
         this.setState({ id: id });
         const response = await fetch(
-            `http://localhost:8080/news/guest/detail?id=${id}`,
+            `http://13.212.33.166/news/guest/detail?id=${id}`,
             {
                 method: "get",
                 mode: "cors",

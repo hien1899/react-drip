@@ -21,7 +21,7 @@ function  login(email, password) {
         body: JSON.stringify({ email, password }),
     };
 
-    return fetch("http://localhost:8080/api/login", requestOptions)
+    return fetch("http://13.212.33.166/api/login", requestOptions)
         .then(handleResponse)
         .then(user => {
             localStorage.setItem('currentUser', JSON.stringify(user));

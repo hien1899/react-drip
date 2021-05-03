@@ -38,7 +38,7 @@ class ChangePassword extends React.Component {
   async handleSubmit(event) {
     event.preventDefault();
     const res = await fetch(
-      'http://localhost:8080/api/forgot/otp',
+      'http://13.212.33.166/api/forgot/otp',
       {
         method: "post",
         mode: "cors",

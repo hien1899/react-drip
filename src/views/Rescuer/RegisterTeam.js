@@ -80,7 +80,7 @@ class RegisterTeam extends React.Component {
         const currentUser = authenticationService.currentUserValue;
         if (currentUser.hasTeam == true) {
             this.setState({ isLoading: true });
-            const response = await fetch('http://localhost:8080/rescuerTeam/team/view?id=' + currentUser.id, {
+            const response = await fetch('http://13.212.33.166/rescuerTeam/team/view?id=' + currentUser.id, {
                 method: "get",
                 mode: 'cors',
                 headers: {
@@ -154,7 +154,7 @@ class RegisterTeam extends React.Component {
 
     async removeMember(id) {
         const currentUser = authenticationService.currentUserValue.accessToken;
-        const res = await fetch(`http://localhost:8080/rescuerTeam/team/member/delete?id=${id}`, {
+        const res = await fetch(`http://13.212.33.166/rescuerTeam/team/member/delete?id=${id}`, {
             method: 'delete',
             mode: 'cors',
             headers: {
@@ -171,7 +171,7 @@ class RegisterTeam extends React.Component {
     async handleSubmit(event) {
         const currentUser = authenticationService.currentUserValue;
         const res = await fetch(
-            'http://localhost:8080/rescuerTeam/create',
+            'http://13.212.33.166/rescuerTeam/create',
             {
                 method: "post",
                 mode: "cors",
@@ -210,7 +210,7 @@ class RegisterTeam extends React.Component {
             event.preventDefault();
             const currentUser = authenticationService.currentUserValue;
             const res = await fetch(
-                'http://localhost:8080/rescuerTeam/team/member/add',
+                'http://13.212.33.166/rescuerTeam/team/member/add',
                 {
                     method: "post",
                     mode: "cors",

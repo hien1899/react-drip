@@ -56,7 +56,7 @@ class ListRescuer extends React.Component {
   async componentDidMount() {
     const currentUser = authenticationService.currentUserValue;
     this.setState({ isLoading: true });
-    const response = await fetch('http://localhost:8080/account/rescuer/view?page=' + this.state.pageId, {
+    const response = await fetch('http://13.212.33.166/account/rescuer/view?page=' + this.state.pageId, {
       method: "get",
       mode: 'cors',
       headers: {
@@ -76,7 +76,7 @@ class ListRescuer extends React.Component {
 
   async remove(id) {
     const currentUser = authenticationService.currentUserValue;
-    await fetch(`http://localhost:8080/account/rescuer/delete/${id}`, {
+    await fetch(`http://13.212.33.166/account/rescuer/delete/${id}`, {
       method: 'DELETE',
       mode: 'cors',
       headers: {
@@ -93,7 +93,7 @@ class ListRescuer extends React.Component {
 
   async handleClickPagination(index) {
     const currentUser = authenticationService.currentUserValue;
-    const response = await fetch(`http://localhost:8080/account/rescuer/view?page=${index}`, {
+    const response = await fetch(`http://13.212.33.166/account/rescuer/view?page=${index}`, {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -112,7 +112,7 @@ class ListRescuer extends React.Component {
     if (index < this.state.totalPage) {
       const currentUser = authenticationService.currentUserValue;
       const nextPageId = index + 1;
-      const response = await fetch(`http://localhost:8080/account/rescuer/view?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/account/rescuer/view?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -131,7 +131,7 @@ class ListRescuer extends React.Component {
     if (index > 1) {
       const currentUser = authenticationService.currentUserValue;
       const nextPageId = index - 1;
-      const response = await fetch(`http://localhost:8080/account/rescuer/view?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/account/rescuer/view?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -160,7 +160,7 @@ class ListRescuer extends React.Component {
     event.preventDefault();
     const { item } = this.state;
     const response = await fetch(
-      "http://localhost:8080/account/rescuer/view/filter?name=" + this.state.item.filter_name + "&email=" + this.state.item.filter_email +
+      "http://13.212.33.166/account/rescuer/view/filter?name=" + this.state.item.filter_name + "&email=" + this.state.item.filter_email +
       "&start_date=" + this.state.item.filter_start_date + "&end_date=" + this.state.item.filter_end_date,
       {
         method: "get",

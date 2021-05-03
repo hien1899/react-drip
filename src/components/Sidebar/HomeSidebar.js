@@ -31,7 +31,7 @@ class HomeSidebar extends React.Component {
 
     async componentDidMount() {
         this.setState({ isLoading: true });
-        const response = await fetch('http://localhost:8080/news/guest/view/top', {
+        const response = await fetch('http://13.212.33.166/news/guest/view/top', {
             method: "get",
             mode: 'cors',
             headers: {

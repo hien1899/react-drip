@@ -61,7 +61,7 @@ class Warehouse extends React.Component {
         const currentUser = authenticationService.currentUserValue;
         if(currentUser.hasTeam==true){
             this.setState({ isLoading: true });
-            const response = await fetch('http://localhost:8080/warehouse/view?account_id=' + currentUser.id, {
+            const response = await fetch('http://13.212.33.166/warehouse/view?account_id=' + currentUser.id, {
                 method: "get",
                 mode: 'cors',
                 headers: {

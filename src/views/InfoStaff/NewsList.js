@@ -64,7 +64,7 @@ class News extends React.Component {
   async componentDidMount() {
     const currentUser = authenticationService.currentUserValue;
     this.setState({ isLoading: true });
-    const response = await fetch('http://localhost:8080/news/view?page=' + this.state.pageId, {
+    const response = await fetch('http://13.212.33.166/news/view?page=' + this.state.pageId, {
       method: "get",
       mode: 'cors',
       headers: {
@@ -100,7 +100,7 @@ class News extends React.Component {
     event.preventDefault();
     const { item } = this.state;
     const response = await fetch(
-      "http://localhost:8080/admin/account/view/filter?name=" + this.state.item.filter_name + "&email=" + this.state.item.filter_email +
+      "http://13.212.33.166/admin/account/view/filter?name=" + this.state.item.filter_name + "&email=" + this.state.item.filter_email +
       "&start_date=" + this.state.item.filter_start_date + "&end_date=" + this.state.item.filter_end_date,
       {
         method: "get",
@@ -124,7 +124,7 @@ class News extends React.Component {
 
   async handleClickPagination(index) {
     const currentUser = authenticationService.currentUserValue;
-    const response = await fetch(`http://localhost:8080/news/view?page=${index}`, {
+    const response = await fetch(`http://13.212.33.166/news/view?page=${index}`, {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -143,7 +143,7 @@ class News extends React.Component {
     if (index < this.state.totalPage) {
       const currentUser = authenticationService.currentUserValue;
       const nextPageId = index + 1;
-      const response = await fetch(`http://localhost:8080/news/view?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/news/view?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -162,7 +162,7 @@ class News extends React.Component {
     if (index > 1) {
       const currentUser = authenticationService.currentUserValue;
       const nextPageId = index - 1;
-      const response = await fetch(`http://localhost:8080/news/view?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/news/view?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -179,7 +179,7 @@ class News extends React.Component {
 
   async remove(new_id) {
     const currentUser = authenticationService.currentUserValue;
-    await fetch(`http://localhost:8080/news/delete/${new_id}`, {
+    await fetch(`http://13.212.33.166/news/delete/${new_id}`, {
       method: 'DELETE',
       mode: 'cors',
       headers: {

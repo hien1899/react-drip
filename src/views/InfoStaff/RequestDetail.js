@@ -68,7 +68,7 @@ class RequestDetail extends React.Component {
     console.log(id)
     if (this.props.match.params.id !== "create") {
       const response = await fetch(
-        `http://localhost:8080/info/location/request/${id}`,
+        `http://13.212.33.166/info/location/request/${id}`,
         {
           method: "get",
           mode: "cors",
@@ -164,7 +164,7 @@ class RequestDetail extends React.Component {
       event.preventDefault()
       const currentUser = authenticationService.currentUserValue;
       const res = await fetch(
-        'http://localhost:8080/info/location/add',
+        'http://13.212.33.166/info/location/add',
         {
           method: "post",
           mode: "cors",

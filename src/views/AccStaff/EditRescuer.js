@@ -68,7 +68,7 @@ class EditRescuer extends React.Component {
     this.setState({ id: id });
     if (this.props.match.params.id !== "create") {
       const response = await fetch(
-        `http://localhost:8080/account/rescuer/${id}`,
+        `http://13.212.33.166/account/rescuer/${id}`,
         {
           method: "get",
           mode: "cors",
@@ -107,7 +107,7 @@ class EditRescuer extends React.Component {
       event.preventDefault();
       const { item } = this.state;
       const res = await fetch(
-        "http://localhost:8080/account/rescuer/" + this.state.id,
+        "http://13.212.33.166/account/rescuer/" + this.state.id,
         {
           method: "PUT",
           mode: "cors",

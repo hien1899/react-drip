@@ -94,7 +94,7 @@ class MapPage extends React.PureComponent {
 
         const currentUser = authenticationService.currentUserValue;
         this.setState({ isLoading: true });
-        const response = await fetch('http://localhost:8080/location/view', {
+        const response = await fetch('http://13.212.33.166/location/view', {
             method: "get",
             mode: 'cors',
             headers: {
@@ -176,7 +176,7 @@ class MapPage extends React.PureComponent {
         const currentUser = authenticationService.currentUserValue
         const { productIdRequest} = this.state;
         const res = await fetch(
-            "http://localhost:8080/location/report?location_id=" + this.state.locationDetail.locationId,
+            "http://13.212.33.166/location/report?location_id=" + this.state.locationDetail.locationId,
             {
                 method: "PUT",
                 mode: "cors",
@@ -217,7 +217,7 @@ class MapPage extends React.PureComponent {
     async handleBookClick(event) {
         const currentUser = authenticationService.currentUserValue
         const res = await fetch(
-            "http://localhost:8080/location/book?account_id=" + currentUser.id + "&location_id=" + this.state.locationDetail.locationId,
+            "http://13.212.33.166/location/book?account_id=" + currentUser.id + "&location_id=" + this.state.locationDetail.locationId,
             {
                 method: "post",
                 mode: "cors",
@@ -239,7 +239,7 @@ class MapPage extends React.PureComponent {
         event.preventDefault()
         const currentUser = authenticationService.currentUserValue
         const res = await fetch(
-            "http://localhost:8080/location/finish?location_id=" + this.state.locationDetail.locationId,
+            "http://13.212.33.166/location/finish?location_id=" + this.state.locationDetail.locationId,
             {
                 method: "PUT",
                 mode: "cors",

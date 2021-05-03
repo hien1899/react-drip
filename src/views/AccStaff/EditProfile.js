@@ -82,7 +82,7 @@ class EditProfile extends React.Component {
     const id = currentUser.id
     if (this.props.match.params.id !== "create") {
       const response = await fetch(
-        `http://localhost:8080/common/profile?id=${id}`,
+        `http://13.212.33.166/common/profile?id=${id}`,
         {
           method: "get",
           mode: "cors",
@@ -129,7 +129,7 @@ class EditProfile extends React.Component {
     event.preventDefault();
     const { password } = this.state;
     const res = await fetch(
-      "http://localhost:8080/common/profile/pass/change",
+      "http://13.212.33.166/common/profile/pass/change",
       {
         method: "POST",
         mode: "cors",
@@ -159,7 +159,7 @@ class EditProfile extends React.Component {
       event.preventDefault();
       const { item } = this.state;
       const res = await fetch(
-        "http://localhost:8080/common/profile/update?id=" + currentUser.id,
+        "http://13.212.33.166/common/profile/update?id=" + currentUser.id,
         {
           method: "PUT",
           mode: "cors",

@@ -93,7 +93,7 @@ class MapPage extends React.PureComponent {
         })
         const currentUser = authenticationService.currentUserValue;
         this.setState({ isLoading: true });
-        const response = await fetch("http://localhost:8080/location/guest/view", {
+        const response = await fetch("http://13.212.33.166/location/guest/view", {
             method: "get",
             mode: 'cors',
             headers: {

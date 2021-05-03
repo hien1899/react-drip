@@ -151,7 +151,7 @@ class CreateLocation extends React.Component {
       const currentUser = authenticationService.currentUserValue;
       event.preventDefault()
       const res = await fetch(
-        'http://localhost:8080/info/location/add',
+        'http://13.212.33.166/info/location/add',
         {
           method: "post",
           mode: "cors",

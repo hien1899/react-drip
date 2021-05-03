@@ -34,7 +34,7 @@ class ForgotPassword extends React.Component {
   async handleSubmit(event) {
     event.preventDefault();
     const res = await fetch(
-      'http://localhost:8080/api/password/forgot?name=' + this.state.email,
+      'http://13.212.33.166/api/password/forgot?name=' + this.state.email,
       {
         method: "get",
         mode: "cors",

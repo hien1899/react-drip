@@ -41,7 +41,7 @@ class CreateNews extends React.Component {
         event.preventDefault();
         const currentUser = authenticationService.currentUserValue.accessToken
         const res = await fetch(
-            'http://localhost:8080/news/create',
+            'http://13.212.33.166/news/create',
             {
                 method: "post",
                 mode: "cors",

@@ -68,7 +68,7 @@ class EditStaff extends React.Component {
     console.log(id)
     if (this.props.match.params.id !== "create") {
       const response = await fetch(
-        `http://localhost:8080/admin/account/${id}`,
+        `http://13.212.33.166/admin/account/${id}`,
         {
           method: "get",
           mode: "cors",
@@ -106,7 +106,7 @@ class EditStaff extends React.Component {
       event.preventDefault();
       const { item } = this.state;
       const res = await fetch(
-        "http://localhost:8080/admin/account/" + this.state.id,
+        "http://13.212.33.166/admin/account/" + this.state.id,
         {
           method: "PUT",
           mode: "cors",

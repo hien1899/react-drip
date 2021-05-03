@@ -38,7 +38,7 @@ class Profile extends React.Component {
     async componentDidMount() {
         const currentUser = authenticationService.currentUserValue;
         this.setState({ isLoading: true });
-        const response = await fetch('http://localhost:8080/common/profile?id=' + currentUser.id, {
+        const response = await fetch('http://13.212.33.166/common/profile?id=' + currentUser.id, {
             method: "get",
             mode: 'cors',
             headers: {

@@ -51,7 +51,7 @@ class CommonRequest extends React.Component {
     async componentDidMount() {
         const currentUser = authenticationService.currentUserValue;
         this.setState({ isLoading: true });
-        const response = await fetch('http://localhost:8080/common/request/view?page=' + this.state.pageId, {
+        const response = await fetch('http://13.212.33.166/common/request/view?page=' + this.state.pageId, {
             method: "get",
             mode: 'cors',
             headers: {
@@ -74,7 +74,7 @@ class CommonRequest extends React.Component {
 
     async handleClickPagination(index) {
         const currentUser = authenticationService.currentUserValue;
-        const response = await fetch(`http://localhost:8080/common/request/view?page=${index}`, {
+        const response = await fetch(`http://13.212.33.166/common/request/view?page=${index}`, {
             method: 'GET',
             mode: 'cors',
             headers: {
@@ -93,7 +93,7 @@ class CommonRequest extends React.Component {
         if (index < this.state.totalPage) {
             const currentUser = authenticationService.currentUserValue;
             const nextPageId = index + 1;
-            const response = await fetch(`http://localhost:8080/common/request/view?page=${nextPageId}`, {
+            const response = await fetch(`http://13.212.33.166/common/request/view?page=${nextPageId}`, {
                 method: 'GET',
                 mode: 'cors',
                 headers: {
@@ -112,7 +112,7 @@ class CommonRequest extends React.Component {
         if (index > 1) {
             const currentUser = authenticationService.currentUserValue;
             const nextPageId = index - 1;
-            const response = await fetch(`http://localhost:8080/common/request/view?page=${nextPageId}`, {
+            const response = await fetch(`http://13.212.33.166/common/request/view?page=${nextPageId}`, {
                 method: 'GET',
                 mode: 'cors',
                 headers: {
@@ -129,7 +129,7 @@ class CommonRequest extends React.Component {
 
     async reject(id) {
         const currentUser = authenticationService.currentUserValue;
-        await fetch(`http://localhost:8080/common/request/reject?id=${id}`, {
+        await fetch(`http://13.212.33.166/common/request/reject?id=${id}`, {
             method: 'post',
             mode: 'cors',
             headers: {
@@ -148,7 +148,7 @@ class CommonRequest extends React.Component {
 
     async accept(id) {
         const currentUser = authenticationService.currentUserValue;
-        await fetch(`http://localhost:8080/common/request/confirm?id=${id}`, {
+        await fetch(`http://13.212.33.166/common/request/confirm?id=${id}`, {
             method: 'post',
             mode: 'cors',
             headers: {

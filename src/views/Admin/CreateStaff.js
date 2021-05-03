@@ -78,7 +78,7 @@ class EditStaff extends React.Component {
       const currentUser = authenticationService.currentUserValue;
       event.preventDefault();
       const res = await fetch(
-        'http://localhost:8080/admin/account/create',
+        'http://13.212.33.166/admin/account/create',
         {
           method: "post",
           mode: "cors",

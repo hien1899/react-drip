@@ -1,26 +1,61 @@
-// const gulp = require("gulp");
-// const gap = require("gulp-append-prepend");
+const gulp = require("gulp");
+const gap = require("gulp-append-prepend");
 
-// gulp.task("default", async function () {
-//   gulp
-//     .src("build/static/js/*chunk.js", { base: "./" })
-//     .pipe(
-//       gap.prependText()
-//     )
-//     .pipe(gulp.dest("./", { overwrite: true }));
+gulp.task("licenses", async function () {
+  gulp
+    .src("build/static/js/*chunk.js", { base: "./" })
+    .pipe(
+      gap.prependText(`/*!
 
-//   gulp
-//     .src("build/index.html", { base: "./" })
-//     .pipe(
-//       gap.prependText()
-//     )
-//     .pipe(gulp.dest("./", { overwrite: true }));
+      =========================================================
+      * DRIP - v1.2.0
+      =========================================================
+      
+      * Coded by HienNN
+      
+      =========================================================
+      
+      * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-//   gulp
-//     .src("build/static/css/*chunk.css", { base: "./" })
-//     .pipe(
-//       gap.prependText()
-//     )
-//     .pipe(gulp.dest("./", { overwrite: true }));
-//   return;
-// });
+*/`)
+    )
+    .pipe(gulp.dest("./", { overwrite: true }));
+  gulp
+    .src("build/index.html", { base: "./" })
+    .pipe(
+      gap.prependText(`<!--
+
+      =========================================================
+      * DRIP - v1.2.0
+      =========================================================
+      
+      * Coded by HienNN
+      
+      =========================================================
+      
+      * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+-->`)
+    )
+    .pipe(gulp.dest("./", { overwrite: true }));
+
+  gulp
+    .src("build/static/css/*chunk.css", { base: "./" })
+    .pipe(
+      gap.prependText(`/*!
+
+=========================================================
+* DRIP - v1.2.0
+=========================================================
+
+* Coded by HienNN
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/`)
+    )
+    .pipe(gulp.dest("./", { overwrite: true }));
+  return;
+});

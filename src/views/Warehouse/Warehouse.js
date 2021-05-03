@@ -85,7 +85,7 @@ class Warehouse extends React.Component {
     async componentDidMount(event) {
         const currentUser = authenticationService.currentUserValue;
         this.setState({ isLoading: true });
-        const response = await fetch('http://localhost:8080/warehouse/view?account_id=' + currentUser.id, {
+        const response = await fetch('http://13.212.33.166/warehouse/view?account_id=' + currentUser.id, {
             method: "get",
             mode: 'cors',
             headers: {
@@ -104,7 +104,7 @@ class Warehouse extends React.Component {
             event.preventDefault();
             const currentUser = authenticationService.currentUserValue.accessToken
             const res = await fetch(
-                'http://localhost:8080/warehouse/product/add',
+                'http://13.212.33.166/warehouse/product/add',
                 {
                     method: "post",
                     mode: "cors",
@@ -134,7 +134,7 @@ class Warehouse extends React.Component {
             event.preventDefault();
             const currentUser = authenticationService.currentUserValue.accessToken
             const res = await fetch(
-                'http://localhost:8080/warehouse/product/update',
+                'http://13.212.33.166/warehouse/product/update',
                 {
                     method: "put",
                     mode: "cors",
@@ -162,7 +162,7 @@ class Warehouse extends React.Component {
 
     async handleRemove(id) {
         const currentUser = authenticationService.currentUserValue.accessToken;
-        const res = await fetch(`http://localhost:8080/warehouse/product/delete?warehouse_product_id=${id}`, {
+        const res = await fetch(`http://13.212.33.166/warehouse/product/delete?warehouse_product_id=${id}`, {
             method: 'put',
             mode: 'cors',
             headers: {

@@ -59,7 +59,7 @@ class Header extends React.Component {
   async componentDidMount() {
     const currentUser = authenticationService.currentUserValue.accessToken;
     this.setState({ isLoading: true });
-    const response = await fetch('http://localhost:8080/info/location/request/pending', {
+    const response = await fetch('http://13.212.33.166/info/location/request/pending', {
       method: "get",
       mode: 'cors',
       headers: {

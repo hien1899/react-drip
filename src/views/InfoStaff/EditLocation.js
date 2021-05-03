@@ -79,7 +79,7 @@ class CreateLocation extends React.Component {
     console.log(id)
     if (this.props.match.params.id !== "create") {
       const response = await fetch(
-        `http://localhost:8080/info/location/${id}`,
+        `http://13.212.33.166/info/location/${id}`,
         {
           method: "get",
           mode: "cors",
@@ -177,7 +177,7 @@ class CreateLocation extends React.Component {
       const currentUser = authenticationService.currentUserValue;
       event.preventDefault()
       const res = await fetch(
-        'http://localhost:8080/info/location/' + this.state.id,
+        'http://13.212.33.166/info/location/' + this.state.id,
         {
           method: "put",
           mode: "cors",

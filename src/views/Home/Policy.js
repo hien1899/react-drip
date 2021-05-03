@@ -44,7 +44,7 @@ class Policy extends React.PureComponent {
   async componentDidMount() {
     const currentUser = authenticationService.currentUserValue;
     this.setState({ isLoading: true });
-    const response = await fetch('http://localhost:8080/news/guest/view/policy?page=' + this.state.pageId, {
+    const response = await fetch('http://13.212.33.166/news/guest/view/policy?page=' + this.state.pageId, {
       method: "get",
       mode: 'cors',
       headers: {
@@ -66,7 +66,7 @@ class Policy extends React.PureComponent {
   }
 
   async handleClickPagination(index) {
-    const response = await fetch(`http://localhost:8080/news/guest/view/policy?page=${index}`, {
+    const response = await fetch(`http://13.212.33.166/news/guest/view/policy?page=${index}`, {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -83,7 +83,7 @@ class Policy extends React.PureComponent {
     if (!index) index = 1;
     if (index < this.state.totalPage) {
       const nextPageId = index + 1;
-      const response = await fetch(`http://localhost:8080/news/guest/view/policy?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/news/guest/view/policy?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -100,7 +100,7 @@ class Policy extends React.PureComponent {
   async handleClickPreviousPagination(index) {
     if (index > 1) {
       const nextPageId = index - 1;
-      const response = await fetch(`http://localhost:8080/news/guest/view/policy?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/news/guest/view/policy?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {

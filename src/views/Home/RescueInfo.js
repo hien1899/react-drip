@@ -47,7 +47,7 @@ class RescueInfo extends React.PureComponent {
   async componentDidMount() {
     const currentUser = authenticationService.currentUserValue;
     this.setState({ isLoading: true });
-    const response = await fetch('http://localhost:8080/news/guest/view/rescue?page=' + this.state.pageId, {
+    const response = await fetch('http://13.212.33.166/news/guest/view/rescue?page=' + this.state.pageId, {
       method: "get",
       mode: 'cors',
       headers: {
@@ -80,7 +80,7 @@ class RescueInfo extends React.PureComponent {
     event.preventDefault();
     const { item } = this.state;
     const response = await fetch(
-      "http://localhost:8080/admin/account/view/filter?name=" + this.state.item.filter_name + "&email=" + this.state.item.filter_email +
+      "http://13.212.33.166/admin/account/view/filter?name=" + this.state.item.filter_name + "&email=" + this.state.item.filter_email +
       "&start_date=" + this.state.item.filter_start_date + "&end_date=" + this.state.item.filter_end_date,
       {
         method: "get",
@@ -103,7 +103,7 @@ class RescueInfo extends React.PureComponent {
   }
 
   async handleClickPagination(index) {
-    const response = await fetch(`http://localhost:8080/news/guest/view/rescue?page=${index}`, {
+    const response = await fetch(`http://13.212.33.166/news/guest/view/rescue?page=${index}`, {
       method: 'GET',
       mode: 'cors',
       headers: {
@@ -120,7 +120,7 @@ class RescueInfo extends React.PureComponent {
     if (!index) index = 1;
     if (index < this.state.totalPage) {
       const nextPageId = index + 1;
-      const response = await fetch(`http://localhost:8080/news/guest/view/rescue?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/news/guest/view/rescue?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {
@@ -137,7 +137,7 @@ class RescueInfo extends React.PureComponent {
   async handleClickPreviousPagination(index) {
     if (index > 1) {
       const nextPageId = index - 1;
-      const response = await fetch(`http://localhost:8080/news/guest/view/rescue?page=${nextPageId}`, {
+      const response = await fetch(`http://13.212.33.166/news/guest/view/rescue?page=${nextPageId}`, {
         method: 'GET',
         mode: 'cors',
         headers: {

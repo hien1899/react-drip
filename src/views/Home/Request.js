@@ -111,7 +111,7 @@ class GuestRequest extends React.PureComponent {
     async handleSendQA(event) {
         event.preventDefault();
         const res = await fetch(
-            'http://localhost:8080/common/request/send',
+            'http://13.212.33.166/common/request/send',
             {
                 method: "post",
                 mode: "cors",
@@ -220,7 +220,7 @@ class GuestRequest extends React.PureComponent {
         if (validateForm(this.state.errors)) {
             event.preventDefault();
             const res = await fetch(
-                'http://localhost:8080/info/location/request/send',
+                'http://13.212.33.166/info/location/request/send',
                 {
                     method: "post",
                     mode: "cors",
